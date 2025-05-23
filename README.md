@@ -79,6 +79,5 @@ This project showcases how to structure small but scalable API tests using Pytho
 
 ## Author
 
-8d70151 (Update README with full test suite details)
 Jacob Simpson – QA Engineer  
 [github.com/jacobsimpsonQA](https://github.com/jacobsimpsonQA)
