@@ -1,3 +1,4 @@
+HEAD
 # API Testing Demo – Pokémon API
 
 ## Overview
@@ -32,5 +33,52 @@ If successful, you’ll see:
 - PokéAPI (public REST API)
 
 ## Author
+
+# Pytest API Demo
+
+## Overview
+A Pytest-based API test suite that interacts with the [PokéAPI](https://pokeapi.co/), built to demonstrate basic request handling, response validation, and negative test coverage.
+
+This project showcases how to structure small but scalable API tests using Python, `requests`, and `pytest`.
+
+---
+
+## How to Run
+
+1. Clone the repo and set up a virtual environment:
+   python3 -m venv venv  
+   source venv/bin/activate
+
+2. Install dependencies:
+   pip install -r requirements.txt
+
+3. Run all tests:
+   pytest
+
+---
+
+## Tests Included
+
+| Test | Description |
+|------|-------------|
+| `test_get_pokemon()` | Validates that `/pokemon/pikachu` returns a 200 response with correct structure |
+| `test_invalid_pokemon_returns_404()` | Sends request to a non-existent Pokémon and expects a 404 |
+| `test_broken_endpoint_returns_404()` | Sends request to an invalid endpoint (`/pokemons`) and expects a 404 |
+| `test_multiple_pokemon()` (x3) | Parameterized test that loops through multiple valid Pokémon and verifies structure |
+
+---
+
+## Tools Used
+
+- Python 3  
+- Pytest  
+- requests  
+- PokéAPI
+
+---
+
+## Author
+
+8d70151 (Update README with full test suite details)
 Jacob Simpson – QA Engineer  
 [github.com/jacobsimpsonQA](https://github.com/jacobsimpsonQA)
