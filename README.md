@@ -10,6 +10,7 @@ A compact, beginner-friendly API testing suite using `pytest` and the public [Po
 - ❌ Invalid Pokémon name returns `404`
 - ♻️ Parameterized test: checks multiple Pokémon by name
 - ⚠️ Broken endpoint returns `404` (bad route)
+- 🧬 Verifies Pikachu’s evolution chain — Pichu → Pikachu → Raichu
 - 🕒 Rate limiting behavior: tests server response to rapid requests
 
 ---
