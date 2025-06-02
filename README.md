@@ -1,58 +1,71 @@
-# API Testing Demo – Pokémon API
+# API Testing Demo
 
-## Overview
-This is a simple Python project that tests the public [PokéAPI](https://pokeapi.co/) using `requests` and `pytest`.
-
-The test suite includes:
-
-- ✅ API availability checks (status 200)
-- ⚠️ Error validation for invalid Pokémon
-- 🔁 Parameterized tests across multiple responses
-
-Great for showcasing beginner-to-mid-level API testing and Python scripting.
+A compact, beginner-friendly API testing suite using `pytest` and the public [PokéAPI](https://pokeapi.co). Built to demonstrate real-world API testing patterns for QA Engineer interviews and portfolio projects.
 
 ---
 
-## How to Run
+## 🔍 What's Tested
+
+- ✅ Valid API response for a known Pokémon (`pikachu`)
+- ❌ Invalid Pokémon name returns `404`
+- ♻️ Parameterized test: checks multiple Pokémon by name
+- ⚠️ Broken endpoint returns `404` (bad route)
+- 🕒 Rate limiting behavior: tests server response to rapid requests
+
+---
+
+## 🧠 Why This Project Matters
+
+This suite showcases:
+- Practical QA thinking beyond happy paths
+- Handling API failure modes like invalid input and rate limits
+- Clean, reusable testing logic in Python
+- Familiarity with real-world tools like `pytest`, `requests`, and GitHub workflows
+
+It’s built as a portfolio-ready proof of hands-on QA ability—especially valuable for Senior QA or QA Lead interviews that ask about API-level validation.
+
+---
+
+## 🚀 Running the Tests
 
 1. Clone this repo  
-2. Create and activate a virtual environment:
+2. Set up your Python environment and install dependencies:  
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+   pip install pytest requests
    ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run all tests:
+3. Run the suite:  
    ```bash
    pytest
    ```
 
 ---
 
-## Tests Included
+## 📁 Project Structure
 
-| Test | Description |
-|------|-------------|
-| `test_get_pokemon()` | Validates that `/pokemon/pikachu` returns a 200 response with correct structure |
-| `test_invalid_pokemon_returns_404()` | Sends request to a non-existent Pokémon and expects a 404 |
-| `test_broken_endpoint_returns_404()` | Sends request to an invalid endpoint (`/pokemons`) and expects a 404 |
-| `test_multiple_pokemon()` (x3) | Parameterized test that loops through multiple valid Pokémon and verifies content |
-
----
-
-## Tech Stack
-
-- Python 3  
-- Pytest  
-- requests  
-- PokéAPI (public REST API)
+```
+api-testing-demo/
+├── test_pokemon_api.py   # Main test file
+├── README.md             # You're looking at it
+└── venv/                 # (optional) Virtual environment folder
+```
 
 ---
 
-## Author
+## 🧪 Test Sample Output
 
-Jacob Simpson – QA Engineer  
-[github.com/jacobsimpsonQA](https://github.com/jacobsimpsonQA)
+```
+test_pokemon_api.py ......                                     [100%]
+7 passed in 3.15s
+```
+
+---
+
+## 🤝 Let’s Connect
+
+If you're into QA, automation, or gaming tech, feel free to reach out or fork the repo!
+
+---
+
+## 🏷️ Tags
+
+`#qa` `#pytest` `#automation` `#api-testing` `#opentowork` `#gamingjobs`
